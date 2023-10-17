@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* SLIDESHOW CSS */
+
+.slideshow-container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.question {
+    display: none;
+}
+.question.active {
+    display: block;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+/* FANCY ANIMATION CSS */
+
+.breathing-text {
+    animation: breathe 4s infinite;
+}
+
+.glowing-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333; /* Text color */
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+}
+
+.light-bar {
+    width: 200px;
+    height: 10px;
+    background-color: white; /* Green color for the "neon" effect */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white; /* Add a glow effect */
+    animation: flicker 1s infinite alternate; /* Create a flickering animation */
+}
+
+@keyframes flicker {
+    0% {
+        box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    }
+    100% {
+        box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+}
