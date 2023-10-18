@@ -8,6 +8,12 @@ body {
     color: white;
 }
 
+#title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .text {
     font-size: 24px;
     font-weight: bold;
@@ -42,7 +48,7 @@ body {
 .glowing-text {
     font-size: 36px;
     font-weight: bold;
-    color: #333; /* Text color */
+    color: white;
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 }
 
@@ -60,7 +66,7 @@ body {
 .light-bar {
     width: 200px;
     height: 10px;
-    background-color: white; /* Green color for the "neon" effect */
+    background-color: white;
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white; /* Add a glow effect */
     animation: flicker 1s infinite alternate; /* Create a flickering animation */
@@ -73,4 +79,12 @@ body {
     100% {
         box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
     }
+}
+
+.hidden {
+    display: none;
+}
+
+#title .hidden {
+    display: none;
 }

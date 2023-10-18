@@ -35,7 +35,12 @@ but.addEventListener('click', async (e) => {
     console.error('Error:', error);
   }
 
-  //TODO: Show reload button
+  let finalScreen =  document.getElementById('final-screen');
+  finalScreen.classList.remove('hidden');
+  form.classList.add('hidden');
+  let title = document.getElementById('title-box');
+  title.classList.add('hidden'); //DIT GAAT FOUT want css voor title is nog sterker dan hidden class, ff fixen
+  //TODO: Reload page after x seconds to start over...
 });
 
 //Question slideshow
@@ -56,6 +61,7 @@ function showQuestion(questionIndex) {
   } else {
     submitBtn.style.display = 'none';
   }
+  hideAndShowButtons();
 }
 
 function prevQuestion() {
@@ -75,15 +81,21 @@ function nextQuestion() {
 const prevbutton = document.getElementById('prevBtn');
 const nextbutton = document.getElementById('nextBtn');
 function hideAndShowButtons(){
+  console.log(currentQuestion);
   if(currentQuestion == questions.length - 1){
-    nextbutton.style.display='none'
+    nextbutton.classList.add('hidden');
   } else {
-    nextbutton.style.display='block'
+    nextbutton.classList.remove('hidden');
   }
-  if(currentQuestion = 0){
-    prevbutton.style.display='none'
+  if(currentQuestion == 0){
+    prevbutton.classList.add('hidden');
   } else {
-    prevbutton.style.display='block'
+    prevbutton.classList.remove('hidden');
+  }
+  if(currentQuestion==-1){
+    console.log('Weg met de knoppen')
+    prevbutton.classList.add('hidden');
+    nextbutton.classList.add('hidden');
   }
 }
 

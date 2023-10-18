@@ -9,24 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="data-form">
-        <div  class="question" id="q1">
-            <input type="text" id="name" placeholder="name">
+    <div class="container">
+        <div id="title-box"> 
+            <h1 class="glowing-text breathing-text">Calculate your Livespan</h1>
+            <div class="light-bar"></div>
+            <p>Tap screen to start...</p>
         </div>
-        <div  class="question" id="q2">
-            <label>What is your age?</label>
-            <input type="range" id="age" min="0" max="100">
+    
+        <form id="data-form">
+            <div  class="question" id="q1">
+                <input type="text" id="name" placeholder="name">
+            </div>
+            <div  class="question" id="q2">
+                <label>What is your age?</label>
+                <input type="range" id="age" min="0" max="100">
+            </div>
+            <div  class="question" id="q3">
+                <label>What is your average daily screentime?</label>
+                <input type="range" id="screentime" min="0" max="24">
+            </div>
+    
+            <div class="button-container">
+                <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+                <button id="nextBtn" onclick="nextQuestion()">Next</button>
+                <button id="submitBtn" style="display: none;">Submit</button>
+            </div>
+          </form>
+          <div id="final-screen" class="hidden">
+            <h1>Calculating Livespan...</h1>
         </div>
-        <div  class="question" id="q3">
-            <label>What is your average daily screentime?</label>
-            <input type="range" id="screentime" min="0" max="24">
-        </div>
-
-        <div class="button-container">
-            <button id="prevBtn" onclick="prevQuestion()">Previous</button>
-            <button id="nextBtn" onclick="nextQuestion()">Next</button>
-            <button id="submitBtn" style="display: none;">Submit</button>
-        </div>
-      </form>
+    </div>
 </body>
 </html>
