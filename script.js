@@ -1,5 +1,15 @@
 const form = document.getElementById('data-form');
 const but = document.getElementById('submitBtn');
+const title = document.getElementById('title-box');
+
+title.addEventListener('click', startQuiz)
+
+function startQuiz(){
+  currentQuestion = 0;
+  title.classList.add('hidden');
+  title.classList.remove('flexy');
+  showQuestion(currentQuestion);
+}
 
 //Keep form from reseting on clicking next button.
 form.addEventListener('submit', async (e) => {
@@ -38,13 +48,11 @@ but.addEventListener('click', async (e) => {
   let finalScreen =  document.getElementById('final-screen');
   finalScreen.classList.remove('hidden');
   form.classList.add('hidden');
-  let title = document.getElementById('title-box');
-  title.classList.add('hidden'); //DIT GAAT FOUT want css voor title is nog sterker dan hidden class, ff fixen
-  //TODO: Reload page after x seconds to start over...
+  setTimeout(() => { location.reload(); }, 2000); //Waits 2 seconds and then refreshes page to start quiz over.
 });
 
 //Question slideshow
-let currentQuestion = 0;
+let currentQuestion = -1;
 const questions = document.querySelectorAll('.question');
 const submitBtn = document.getElementById('submitBtn');
 
@@ -57,9 +65,9 @@ function showQuestion(questionIndex) {
     }
   });
   if (questionIndex === questions.length - 1) {
-    submitBtn.style.display = 'block';
+    submitBtn.classList.remove('hidden');
   } else {
-    submitBtn.style.display = 'none';
+    submitBtn.classList.add('hidden');
   }
   hideAndShowButtons();
 }
