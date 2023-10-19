@@ -7,25 +7,30 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script type="text/javascript" src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gwb0wre.css">
 </head>
 <body>
     <div class="container">
         <div id="title-box" class="flexy"> 
-            <h1 class="glowing-text breathing-text">Calculate your Livespan</h1>
-            <div class="light-bar"></div>
-            <p>Tap screen to start..</p>
+            <h1 class="glowing-text breathing-text">WE WILL SHOW <br> YOU YOUR <br> FUTURE </h1>
+            <div class="light-bar-ver"></div>
+           <!-- <p>Tap screen to start..</p>-->
         </div>
     
         <form id="data-form">
             <div  class="question" id="q1">
+                <div class="light-bar-hor"></div>
+                <h1 class="naam">ENTER YOUR NAME</h1>
                 <input type="text" id="name" placeholder="name">
             </div>
             <div  class="question" id="q2">
-                <label>What is your age?</label>
+                <div class="light-bar-hor"></div>
+                <h1 class="age">ENTER YOUR AGE</h1>
                 <input type="range" id="age" min="0" max="100">
             </div>
             <div  class="question" id="q3">
-                <label>What is your average daily screentime?</label>
+                <div class="light-bar-hor"></div>
+                <h1 class="screentime">WHAT IS YOUR AVERAGE <br>DAILY SCREENTIME?</h1>
                 <input type="range" id="screentime" min="0" max="24">
             </div>
     
@@ -36,7 +41,7 @@
             </div>
           </form>
           <div id="final-screen" class="hidden">
-            <h1>Calculating Livespan...</h1>
+            <h1 class="calculating">Calculating Livespan...</h1>
         </div>
     </div>
 </body>

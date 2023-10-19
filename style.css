@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: black;
+    background-color: #141328;
     color: white;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .text {
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -30,29 +30,33 @@ body {
 }
 .question {
     display: none;
+    
 }
 .question.active {
     display: block;
+    
 }
 .button-container {
     display: flex;
     justify-content: space-between;
   }
 
-/* FANCY ANIMATION CSS */
+/* FANCY ANIMATION CSS 
 
 .breathing-text {
     animation: breathe 4s infinite;
-}
+}*/
 
 .glowing-text {
-    font-size: 36px;
-    font-weight: bold;
+    font-family: "owners-xwide", sans-serif;
+font-weight: 400;
+font-style: normal;
+    font-size: 130px;
     color: white;
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    /*text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;*/
 }
 
-@keyframes breathe {
+/*@keyframes breathe {
     0%, 100% {
         transform: scale(1);
         text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
@@ -61,23 +65,37 @@ body {
         transform: scale(1.1);
         text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
     }
-}
+}*/
 
-.light-bar {
-    width: 200px;
-    height: 10px;
+.light-bar-ver {
+    width: 20px;
+    height: 800px;
+    position: fixed;
+    left: 10%;
+    top: 30;
     background-color: white;
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white; /* Add a glow effect */
-    animation: flicker 1s infinite alternate; /* Create a flickering animation */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px #15f4ee, 0 0 30px #15f4ee, 0 0 40px #15f4ee, 0 0 50px #15f4ee; /* Add a glow effect */
+    animation: flicker 2s infinite alternate; /* Create a flickering animation */
 }
 
+.light-bar-hor {
+    width: 1500px;
+    height: 20px;
+    position: fixed;
+    left: 10%;
+    top: 12%;
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px #15f4ee, 0 0 30px #15f4ee, 0 0 40px #15f4ee, 0 0 50px #15f4ee; /* Add a glow effect */
+    animation: flicker 2s infinite alternate; /* Create a flickering animation */
+}
 @keyframes flicker {
     0% {
-        box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+        box-shadow: 0 0 10px #15f4ee, 0 0 20px #15f4ee, 0 0 30px #15f4ee;
     }
     100% {
-        box-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+        box-shadow: 0 0 100px #15f4ee, 0 0 110px #15f4ee, 0 0 120px #15f4ee;
     }
 }
 
@@ -87,4 +105,43 @@ body {
 
 #title .hidden {
     display: none;
+}
+
+.naam {
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    color: white; 
+    margin-top: -80px;
+    
+}
+
+.age {
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    color: white; 
+    margin-top: -80px;
+}
+
+.screentime {
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    color: white; 
+    margin-top: -80px;
+    display: flex;
+    align-items: center;
+}
+
+.calculating {
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    color: white; 
+    margin-top: -80px;
 }
