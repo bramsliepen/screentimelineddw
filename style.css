@@ -51,7 +51,7 @@ body {
     font-family: "owners-xwide", sans-serif;
 font-weight: 400;
 font-style: normal;
-    font-size: 130px;
+    font-size: 80px;
     color: white;
     /*text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;*/
 }
@@ -69,7 +69,7 @@ font-style: normal;
 
 .light-bar-ver {
     width: 20px;
-    height: 800px;
+    height: 700px;
     position: fixed;
     left: 10%;
     top: 30;
@@ -80,7 +80,7 @@ font-style: normal;
 }
 
 .light-bar-hor {
-    width: 1500px;
+    width: 950px;
     height: 20px;
     position: fixed;
     left: 10%;
@@ -111,37 +111,177 @@ font-style: normal;
     font-family: "owners-xwide", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 60px;
     color: white; 
     margin-top: -80px;
+}
+
+.question {
+    text-align: center;
+    padding: 20px;
+}
+
+#name {
+    width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            border: 2px solid transparent;
+            border-image: linear-gradient(to right, white, #15f4ee) 1;
+            border-image-slice: 1;
+            padding: 10px; /* Adjust the padding as needed */
+            color: white; /* Text color */
+            background: transparent; /* Transparent background */
+            margin-top: 44px; /* Adjust the margin-top value to move it down by your desired amount */
+            animation: moveGradient 5s linear infinite; /* Animation to move gradient */
+}
+
+@keyframes moveGradient {
+    0% {
+        border-image-source: linear-gradient(to left, white, #15f4ee);
+        background-position: 100% 0;
+    }
     
+    100% {
+        border-image-source: linear-gradient(to right, white, #15f4ee);
+        background-position: 100% 0;
+    }
+}
+
+#nextBtn{
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "owners-xwide", sans-serif;
+    border: 2px solid #141328; /* Change the border color to white */
+    padding: 10px; /* Adjust the padding as needed */
+    color: white; /* Text color */
+    background: transparent; /* Transparent background */
+    position: absolute; /* Position it absolutely */
+    top: 70%; /* Center vertically */
+    left: 43%; /* Center horizontally */
+    width: 150px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
 }
 
 .age {
     font-family: "owners-xwide", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 60px;
     color: white; 
     margin-top: -80px;
 }
+ 
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 950px; /* Adjust the thumb width as needed */
+                          
+  }
+
+ /* Style the track */
+input[type="range"]::-webkit-slider-runnable-track {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, white, #15f4ee) 1;
+    border-image-slice: 1;
+    height: 20px;
+    margin-top: 45px; /* Adjust the margin-top value to move it down by your desired amount */
+  }
+  
+   /* Style the track */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -12px; /* Centers thumb on the track */
+    background-color: white;
+    height: 2.5rem;
+    width: 1rem; 
+  }
+
+  /* Style the labels for the slider */
+.slider-age {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    position: absolute;
+    top: 60%; /* Adjust this value to move the labels down */
+  left: 120px; /* Adjust this value to move the labels to the right */
+  }
+  
+  /* Style individual labels */
+  .slider-age span {
+    font-family: "owners-xwide", sans-serif;
+    font-size: 14px;
+    color: white; /* Adjust the color as needed */
+  }
+
 
 .screentime {
     font-family: "owners-xwide", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 60px;
     color: white; 
     margin-top: -80px;
+    margin-left: 40px;
     display: flex;
     align-items: center;
+}
+
+ /* Style the labels for the slider */
+ .slider-screen {
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    position: absolute;
+    top: 65%; /* Adjust this value to move the labels down */
+  left: 120px; /* Adjust this value to move the labels to the right */
+  }
+  
+  /* Style individual labels */
+  .slider-screen span {
+    font-family: "owners-xwide", sans-serif;
+    font-size: 14px;
+    color: white; /* Adjust the color as needed */
+  }
+
+  #submitBtn{
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "owners-xwide", sans-serif;
+    border: 2px solid #141328; /* Change the border color to white */
+    padding: 10px; /* Adjust the padding as needed */
+    color: white; /* Text color */
+    background: transparent; /* Transparent background */
+    position: absolute; /* Position it absolutely */
+    top: 80%; /* Center vertically */
+    left: 43%; /* Center horizontally */
+    width: 150px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
 }
 
 .calculating {
     font-family: "owners-xwide", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 80px;
     color: white; 
-    margin-top: -80px;
+    margin-top: 5%;
 }
+
+.light-bar-ver2 {
+    width: 20px;
+    height: 700px;
+    position: fixed;
+    left: 10%;
+    top: 60px;
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px #15f4ee, 0 0 30px #15f4ee, 0 0 40px #15f4ee, 0 0 50px #15f4ee; /* Add a glow effect */
+    animation: flicker 2s infinite alternate; /* Create a flickering animation */
+}
+
+
+  
+

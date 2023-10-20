@@ -48,7 +48,7 @@ but.addEventListener('click', async (e) => {
   let finalScreen =  document.getElementById('final-screen');
   finalScreen.classList.remove('hidden');
   form.classList.add('hidden');
-  setTimeout(() => { location.reload(); }, 2000); //Waits 2 seconds and then refreshes page to start quiz over.
+  setTimeout(() => { location.reload(); }, 10000); //Waits 2 seconds and then refreshes page to start quiz over.
 });
 
 //Question slideshow
@@ -65,6 +65,7 @@ function showQuestion(questionIndex) {
     }
   });
   if (questionIndex === questions.length - 1) {
+    submitBtn.textContent = 'SUBMIT';
     submitBtn.classList.remove('hidden');
   } else {
     submitBtn.classList.add('hidden');
@@ -104,6 +105,7 @@ function hideAndShowButtons(){
     console.log('Weg met de knoppen')
     prevbutton.classList.add('hidden');
     nextbutton.classList.add('hidden');
+    nextbutton.textContent = "NEXT";
   }
 }
 
