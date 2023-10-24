@@ -3,9 +3,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     margin: 0;
     background-color: #141328;
     color: white;
+    overflow: hidden;
 }
 
 .flexy {
@@ -199,18 +201,27 @@ input[type="range"]::-webkit-slider-thumb {
     width: 1rem; 
   }
 
-  /* Style the labels for the slider */
-.slider-age {
+.slider-container {
     display: flex;
     justify-content: space-between;
-    width: 970px;
-    position: absolute;
-    top: 60%; /* Adjust this value to move the labels down */
-  left: 115px; /* Adjust this value to move the labels to the right */
+    flex-direction: column;
+}
+
+  /* Style the labels for the slider */
+.slider-age {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .slider-value {
+    margin-top: 5%;
+
   }
   
   /* Style individual labels */
-  .slider-age span {
+  .slider-value {
     font-family: "owners-xwide", sans-serif;
     font-size: 14px;
     color: white; /* Adjust the color as needed */
