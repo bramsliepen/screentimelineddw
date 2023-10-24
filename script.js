@@ -73,13 +73,6 @@ function showQuestion(questionIndex) {
   hideAndShowButtons();
 }
 
-function prevQuestion() {
-  if (currentQuestion > 0) {
-    currentQuestion--;
-    showQuestion(currentQuestion);
-  }
-}
-
 function nextQuestion() {
   if (currentQuestion < questions.length - 1) {
     currentQuestion++;
@@ -87,7 +80,7 @@ function nextQuestion() {
   }
 }
 
-const prevbutton = document.getElementById('prevBtn');
+
 const nextbutton = document.getElementById('nextBtn');
 function hideAndShowButtons(){
   console.log(currentQuestion);
@@ -96,14 +89,8 @@ function hideAndShowButtons(){
   } else {
     nextbutton.classList.remove('hidden');
   }
-  if(currentQuestion == 0){
-    prevbutton.classList.add('hidden');
-  } else {
-    prevbutton.classList.remove('hidden');
-  }
   if(currentQuestion==-1){
     console.log('Weg met de knoppen')
-    prevbutton.classList.add('hidden');
     nextbutton.classList.add('hidden');
     nextbutton.textContent = "NEXT";
   }
