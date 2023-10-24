@@ -71,10 +71,10 @@ font-style: normal;
 
 .light-bar-ver {
     width: 20px;
-    height: 700px;
+    height: 80vh;
     position: fixed;
     left: 10%;
-    top: 30;
+    top: 10%;
     background-color: white;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 20px #15f4ee, 0 0 30px #15f4ee, 0 0 40px #15f4ee, 0 0 50px #15f4ee; /* Add a glow effect */
@@ -82,7 +82,7 @@ font-style: normal;
 }
 
 .light-bar-hor {
-    width: 950px;
+    width: 80vw;
     height: 20px;
     position: fixed;
     left: 10%;
