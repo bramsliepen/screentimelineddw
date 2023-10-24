@@ -27,7 +27,7 @@ but.addEventListener('click', async (e) => {
   let formData = {"name":name, "age":age, "screenTime":screenTime}
 
   try {
-    const response = await fetch('http://145.49.110.218:3000/data', {
+    const response = await fetch('https://f916-2001-610-1a0-2301-455a-8d1a-843c-9553.ngrok-free.app/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
