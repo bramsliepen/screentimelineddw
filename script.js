@@ -37,7 +37,6 @@ but.addEventListener('click', async (e) => {
 
     if (response.ok) {
       const result = await response.text();
-      console.log(result);
     } else {
       console.error('Failed to send data.');
     }
@@ -83,25 +82,14 @@ function nextQuestion() {
 
 const nextbutton = document.getElementById('nextBtn');
 function hideAndShowButtons(){
-  console.log(currentQuestion);
   if(currentQuestion == questions.length - 1){
     nextbutton.classList.add('hidden');
   } else {
     nextbutton.classList.remove('hidden');
   }
   if(currentQuestion==-1){
-    console.log('Weg met de knoppen')
     nextbutton.classList.add('hidden');
     nextbutton.textContent = "NEXT";
-  }
-}
-
-
-//TODO: Check if we can remove this
-function submitForm() {
-  const formData = new FormData(questions[currentQuestion].querySelector('form'));
-  for (const entry of formData.entries()) {
-    console.log(`${entry[0]}: ${entry[1]}`);
   }
 }
 
