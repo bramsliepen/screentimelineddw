@@ -27,7 +27,7 @@ but.addEventListener('click', async (e) => {
   let formData = {"name":name, "age":age, "screenTime":screenTime}
 
   try {
-    const response = await fetch('http://127.0.0.1:3000/data', {
+    const response = await fetch('http://145.49.110.218:3000/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
