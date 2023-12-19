@@ -50,7 +50,7 @@ but.addEventListener('click', async (e) => {
   setTimeout(() => { location.reload(); }, 10000); //Waits 2 seconds and then refreshes page to start quiz over.
 });
 
-//Question slideshow
+//Question slideshow 
 let currentQuestion = -1;
 const questions = document.querySelectorAll('.question');
 const submitBtn = document.getElementById('submitBtn');
