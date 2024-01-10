@@ -313,7 +313,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 .socialIcon {
     height: 100%;
-    padding-right: 10vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 .radio-input{
@@ -335,7 +336,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 label {
@@ -371,3 +372,6 @@ input[type="radio"]:checked::before {
     transform: scale(1);
   }
   
+.platform {
+    margin-top: 2vh;
+}
