@@ -23,6 +23,7 @@ but.addEventListener('click', async (e) => {
   const name = document.getElementById('name').value;
   const age = document.getElementById('age').value;
   const screenTime = document.getElementById('screentime').value;
+  
 
   let formData = {"name":name, "age":age, "screenTime":screenTime}
 
