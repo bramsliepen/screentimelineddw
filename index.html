@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/gwb0wre.css">
 </head>
+
 <body>
     <div class="container">
-        <div id="title-box" class="flexy"> 
-            <h1 class="glowing-text breathing-text">DISCOVER THE  <br> VALUE OF YOUR   <br> SCREENTIME </h1>
+        <div id="title-box" class="flexy">
+            <h1 class="glowing-text breathing-text">DISCOVER THE <br> VALUE OF YOUR <br> SCREENTIME </h1>
             <div class="light-bar-ver"></div>
-           <!-- <p>Tap screen to start..</p>-->
+            <!-- <p>Tap screen to start..</p>-->
         </div>
-    
+
         <form id="data-form">
-            <div  class="question" id="q1">
+            <div class="question" id="q1">
                 <div class="light-bar-hor"></div>
                 <h1 class="naam">ENTER YOUR NAME</h1>
                 <input type="text" id="name" placeholder="name">
             </div>
-            <div  class="question" id="q2">
+            <div class="question" id="q2">
                 <div class="light-bar-hor"></div>
                 <h1 class="age">ENTER YOUR AGE IN YEARS</h1>
                 <div class="slider-container">
@@ -32,56 +34,70 @@
                     <output class="slider-value">50</output>
                 </div>
             </div>
-            <div  class="question" id="q3">
+            <div class="question" id="q3">
                 <div class="light-bar-hor"></div>
                 <h1 class="screentime">WHAT IS YOUR AVERAGE <br>DAILY SCREENTIME IN HOURS?</h1>
                 <div class="slider-container">
-                    <input type="range" id="screentime" min="0" max="15" oninput="this.nextElementSibling.value = this.value">
+                    <input type="range" id="screentime" min="0" max="15"
+                        oninput="this.nextElementSibling.value = this.value">
                     <output class="slider-value">8</output>
                 </div>
             </div>
-            <div  class="question" id="q4">
+            <div class="question" id="q4">
                 <div class="light-bar-hor"></div>
                 <h1 class="platform">WHAT IS YOUR MOST USED <br>ONLINE PLATFORM? </h1>
-                <div class="checkbox-container">
-                <div class="checkbox-input">
-                    <input type="checkbox" name="facebook" id="facebookIcon">
-                    <label for="facebookIcon">
-                        <img src="./images/facebook.png" alt="Facebook Icon">
-                    </label>
-                    <input type="checkbox" name="instagram" id="instagramIcon">
-                    <label for="instagramIcon">
-                        <img src="./images/instagram.png" alt="Instagram Icon">
-                    </label>
-                    <input type="checkbox" name="tiktok" id="tiktokIcon">
-                    <label for="tiktokIcon">
-                        <img src="./images/tiktok.png" alt="Tiktok Icon">
-                    </label>
-                    <input type="checkbox" name="snapchat" id="snapchatIcon">
-                    <label for="snapchatIcon">
-                        <img src="./images/snapchat.png" alt="Snapchat Icon">
-                    </label>
-                    <input type="checkbox" name="twitter" id="twitterIcon">
-                    <label for="twitterIcon">
-                        <img src="./images/twitter.png" alt="Twitter Icon">
-                    </label>
-                    <input type="checkbox" name="youtube" id="youtubeIcon">
-                    <label for="youtubeIcon">
-                        <img src="./images/youtube.png" alt="Youtube Icon">
-                    </label>
+                <div class="radio-container">
+                    <div class="radio-input">
+                        <div class="option">
+                            <input type="radio" name="socialMedium" id="facebookIcon" value="facebook">
+                            <label for="facebookIcon">
+                                <img src="./images/facebook.png" alt="Facebook Icon" class="socialIcon">
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="socialMedium" id="instagramIcon" value="instagram">
+                            <label for="instagramIcon">
+                                <img src="./images/instagram.png" alt="Instagram Icon" class="socialIcon">
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="socialMedium" id="tiktokIcon" value="tiktok">
+                            <label for="tiktokIcon">
+                                <img src="./images/tiktok.png" alt="Tiktok Icon" class="socialIcon">
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="socialMedium" id="snapchatIcon" value="snapchat">
+                            <label for="snapchatIcon">
+                                <img src="./images/snapchat.png" alt="Snapchat Icon" class="socialIcon">
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="socialMedium" id="twitterIcon" value="twitter">
+                            <label for="twitterIcon">
+                                <img src="./images/twitter.png" alt="Twitter Icon" class="socialIcon">
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="socialMedium" id="youtubeIcon" value="youtube">
+                            <label for="youtubeIcon">
+                                <img src="./images/youtube.png" alt="Youtube Icon" class="socialIcon">
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-    
+
             <div class="button-container">
                 <button id="nextBtn" onclick="nextQuestion()">Next</button>
                 <button id="submitBtn" class="hidden">Submit</button>
             </div>
-          </form>
-          <div id="final-screen" class="hidden">
+        </form>
+        <div id="final-screen" class="hidden">
             <h1 class="calculating">CALCULATING THE <br> VALUE OF YOUR <br> SCREENTIME . . . . .</h1>
             <div class="light-bar-ver2"></div>
         </div>
     </div>
 </body>
+
 </html>

@@ -23,10 +23,19 @@ but.addEventListener('click', async (e) => {
   const name = document.getElementById('name').value;
   const age = document.getElementById('age').value;
   const screenTime = document.getElementById('screentime').value;
+
+  const socials = document.getElementsByName('socialMedium')
+  let socialMedium;
+  for (i = 0; i < socials.length; i++) {
+    if(socials[i].checked){
+      socialMedium = socials[i].value
+    }
+  }
+
   
 
-  let formData = {"name":name, "age":age, "screenTime":screenTime}
-
+  let formData = {"name":name, "age":age, "screenTime":screenTime, "social":socialMedium}
+  console.log(formData)
   try {
     const response = await fetch('https://wired-glider-clearly.ngrok-free.app/data', {
       method: 'POST',

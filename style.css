@@ -306,19 +306,43 @@ input[type="range"]::-webkit-slider-thumb {
     align-items: center;
 }
 
+.radio-container{
+    display: grid;
+    height: 40vh;
+}
 
-.checkbox-input{
+.socialIcon {
+    height: 100%;
+    padding-right: 10vh;
+}
+
+.radio-input{
     font-family: "owners-xwide", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 25px;
     color: white; 
     display: grid;
-    grid-template-columns: 1em auto;
     gap: 0.5em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 40vh;
 }
 
-input[type="checkbox"] {
+.option {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    height: 100%;
+}
+
+input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
     background-color: #141328;
@@ -334,7 +358,7 @@ input[type="checkbox"] {
     place-content: center;
   }
   
-input[type="checkbox"]::before {
+input[type="radio"]::before {
     content: "";
     width: 0.65em;
     height: 0.65em;
@@ -343,7 +367,7 @@ input[type="checkbox"]::before {
     background-color: #15f4ee;
   }
   
-input[type="checkbox"]:checked::before {
+input[type="radio"]:checked::before {
     transform: scale(1);
   }
   
